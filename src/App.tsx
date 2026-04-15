@@ -227,25 +227,26 @@ export default function App() {
             <h2 className="font-headline text-3xl md:text-4xl font-light text-on-surface">Alguns de Nossos Trabalhos</h2>
           </FadeIn>
           
-          <div className="flex gap-6 overflow-x-auto pb-12 snap-x no-scrollbar px-6 max-w-[100vw]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {[
-              { title: "Projeto Alpha", url: "https://my.matterport.com/show/?m=gAyKQv25SbW", img: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop" },
-              { title: "Corporate Beta", url: "https://my.matterport.com/show/?m=rJmuyLNPLyy", img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=800&auto=format&fit=crop" },
-              { title: "Industrial Gamma", url: "https://my.matterport.com/show/?m=5fcFQbQQ6kV", img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop" },
-              { title: "Retail Delta", url: "https://my.matterport.com/show/?m=vcQycyqev4K", img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=800&auto=format&fit=crop" },
-              { title: "Clinic Epsilon", url: "https://my.matterport.com/show/?m=xFJ43zUYq6U", img: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800&auto=format&fit=crop" },
-              { title: "Caixa Pará", url: "https://urano360.com.br/caixa-para/", img: "https://images.unsplash.com/photo-1554469384-e58fac16e23a?q=80&w=800&auto=format&fit=crop" }
+              { title: "CABOCA", desc: "Matterport 3D Showcase", url: "https://my.matterport.com/show/?m=gAyKQv25SbW", img: "https://my.matterport.com/api/v2/player/models/gAyKQv25SbW/thumb/" },
+              { title: "Condomínio Jardins do Lago", desc: "Matterport 3D Showcase", url: "https://my.matterport.com/show/?m=rJmuyLNPLyy", img: "https://my.matterport.com/api/v2/player/models/rJmuyLNPLyy/thumb/" },
+              { title: "Associação Comercial do Pará - ACP", desc: "Matterport 3D Showcase", url: "https://my.matterport.com/show/?m=5fcFQbQQ6kV", img: "https://my.matterport.com/api/v2/player/models/5fcFQbQQ6kV/thumb/" },
+              { title: "Centro de Cirurgia Instituto Face", desc: "Matterport 3D Showcase", url: "https://my.matterport.com/show/?m=vcQycyqev4K", img: "https://my.matterport.com/api/v2/player/models/vcQycyqev4K/thumb/" },
+              { title: "AGJ HOSPITAL SAÚDE CENTER", desc: "Hospital de Alta Complexidade 24h em Capanema", url: "https://my.matterport.com/show/?m=xFJ43zUYq6U", img: "https://my.matterport.com/api/v2/player/models/xFJ43zUYq6U/thumb/" },
+              { title: "Tour virtual Caixa Pará", desc: "Virtual Tour", url: "https://urano360.com.br/caixa-para/", img: "https://images.unsplash.com/photo-1554469384-e58fac16e23a?q=80&w=800&auto=format&fit=crop" }
             ].map((work, idx) => (
-              <FadeIn key={idx} delay={idx * 0.1} className="min-w-[280px] md:min-w-[320px] snap-center group block">
-                <a href={work.url} target="_blank" rel="noopener noreferrer" className="block">
-                  <div className="relative h-[320px] rounded-xl overflow-hidden mb-6 border border-outline-variant">
+              <FadeIn key={idx} delay={idx * 0.1} className="group block">
+                <a href={work.url} target="_blank" rel="noopener noreferrer" className="block h-full">
+                  <div className="relative h-[320px] rounded-xl overflow-hidden border border-outline-variant">
                     <img src={work.img} alt={work.title} className="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent p-6 flex flex-col justify-end">
+                    <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/50 to-transparent p-6 flex flex-col justify-end">
                       <div className="w-8 h-8 rounded-full border border-primary flex items-center justify-center mb-4 text-primary group-hover:bg-primary group-hover:text-surface transition-colors">
                         <Eye className="w-4 h-4" />
                       </div>
-                      <h4 className="font-headline text-lg font-bold text-on-surface">{work.title}</h4>
-                      <span className="font-label text-primary text-[10px] uppercase tracking-widest mt-2 flex items-center gap-1">
+                      <h4 className="font-headline text-lg font-bold text-on-surface mb-1">{work.title}</h4>
+                      <p className="font-body text-xs text-on-surface-variant line-clamp-2 mb-3">{work.desc}</p>
+                      <span className="font-label text-primary text-[10px] uppercase tracking-widest flex items-center gap-1">
                         Explorar Tour <ChevronRight className="w-3 h-3" />
                       </span>
                     </div>
