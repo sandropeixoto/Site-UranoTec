@@ -80,7 +80,7 @@ export default function App() {
               <h1 className="font-headline text-5xl md:text-6xl font-light tracking-tight text-on-surface leading-[1.1] mb-8">
                 Transformamos <b className="font-black text-primary">Espaços Físicos</b> <br/> em Experiências Digitais
               </h1>
-              <p className="font-body text-sm text-on-surface-variant max-w-md mb-10 leading-relaxed">
+              <p className="font-body text-lg text-on-surface-variant max-w-md mb-10 leading-relaxed">
                 Tours virtuais 360º de alto impacto para marketing, vendas e integração de equipes.
               </p>
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
@@ -175,18 +175,18 @@ export default function App() {
             <FadeIn delay={0.1} className="bg-surface/70 backdrop-blur-md p-6 rounded-xl border border-outline-variant hover:border-primary/50 transition-colors">
               <h3 className="font-headline text-lg font-bold text-on-surface mb-1">PUCK</h3>
               <span className="text-primary text-[10px] font-label uppercase tracking-widest mb-4 block">Básico</span>
-              <p className="font-body text-xs text-on-surface-variant">Até 10 pontos de vista com interatividade digital.</p>
+              <p className="font-body text-sm text-on-surface-variant">Até 10 pontos de vista com interatividade digital.</p>
             </FadeIn>
             <FadeIn delay={0.2} className="bg-surface/70 backdrop-blur-md p-6 rounded-xl border border-primary relative overflow-hidden">
               <div className="absolute top-0 right-0 bg-primary text-surface text-[9px] font-bold px-2 py-1 rounded-bl uppercase tracking-widest">Mais Popular</div>
               <h3 className="font-headline text-lg font-bold text-on-surface mb-1">OBERON</h3>
               <span className="text-primary text-[10px] font-label uppercase tracking-widest mb-4 block">Médio</span>
-              <p className="font-body text-xs text-on-surface-variant">11 a 20 pontos de vista, experiência completa.</p>
+              <p className="font-body text-sm text-on-surface-variant">11 a 20 pontos de vista, experiência completa.</p>
             </FadeIn>
             <FadeIn delay={0.3} className="bg-surface/70 backdrop-blur-md p-6 rounded-xl border border-outline-variant hover:border-primary/50 transition-colors">
               <h3 className="font-headline text-lg font-bold text-on-surface mb-1">TITÂNIA</h3>
               <span className="text-primary text-[10px] font-label uppercase tracking-widest mb-4 block">Avançado</span>
-              <p className="font-body text-xs text-on-surface-variant">21 a 30 pontos de vista, máximo nível de imersão.</p>
+              <p className="font-body text-sm text-on-surface-variant">21 a 30 pontos de vista, máximo nível de imersão.</p>
             </FadeIn>
           </div>
         </section>
@@ -218,7 +218,7 @@ export default function App() {
                     <item.icon className="w-5 h-5" />
                   </div>
                   <h4 className="font-headline text-sm font-bold text-on-surface mb-2 pl-3 border-l border-primary">{item.title}</h4>
-                  <p className="font-body text-[11px] text-on-surface-variant leading-relaxed pl-3">{item.desc}</p>
+                  <p className="font-body text-sm text-on-surface-variant leading-relaxed pl-3">{item.desc}</p>
                 </FadeIn>
               ))}
             </div>
@@ -253,7 +253,7 @@ export default function App() {
                         <Eye className="w-4 h-4" />
                       </div>
                       <h4 className="font-headline text-lg font-bold text-on-surface mb-1">{work.title}</h4>
-                      <p className="font-body text-xs text-on-surface-variant line-clamp-2 mb-3">{work.desc}</p>
+                      <p className="font-body text-sm text-on-surface-variant line-clamp-2 mb-3">{work.desc}</p>
                       <span className="font-label text-primary text-[10px] uppercase tracking-widest flex items-center gap-1">
                         Explorar Tour <ChevronRight className="w-3 h-3" />
                       </span>
@@ -282,7 +282,7 @@ export default function App() {
               <FadeIn delay={0.1} className="md:col-span-2 bg-surface/70 backdrop-blur-md p-8 rounded-xl border border-outline-variant hover:border-primary/50 transition-colors group relative overflow-hidden">
                 <span className="text-primary mb-6 block"><Settings className="w-8 h-8" /></span>
                 <h3 className="font-headline text-xl font-bold text-on-surface mb-3">Software Avançado</h3>
-                <p className="font-body text-xs text-on-surface-variant mb-6 max-w-xl leading-relaxed">
+                <p className="font-body text-sm text-on-surface-variant mb-6 max-w-xl leading-relaxed">
                   Utilizamos as plataformas mais poderosas do mundo para a criação de tours virtuais. Diferente de soluções padronizadas, elas nos permitem um controle criativo total para personalizar cada detalhe — da interface com as cores e logo da sua marca até a inclusão de vídeos, gamificação e hotspots informativos.
                 </p>
               </FadeIn>
@@ -290,7 +290,7 @@ export default function App() {
               <FadeIn delay={0.2} className="bg-surface/70 backdrop-blur-md p-8 rounded-xl border border-outline-variant hover:border-primary/50 transition-colors group">
                 <span className="text-primary mb-6 block"><ImageIcon className="w-8 h-8" /></span>
                 <h3 className="font-headline text-xl font-bold text-on-surface mb-3">Alta Resolução</h3>
-                <p className="font-body text-xs text-on-surface-variant leading-relaxed">
+                <p className="font-body text-sm text-on-surface-variant leading-relaxed">
                   Mais do que ver: sentir. A altíssima resolução dos nossos tours permite uma imersão total, com uma riqueza de detalhes que torna a experiência virtual surpreendentemente real.
                 </p>
               </FadeIn>
@@ -299,7 +299,7 @@ export default function App() {
                 <div className="flex-1">
                   <span className="text-primary mb-6 block"><MousePointerClick className="w-8 h-8" /></span>
                   <h3 className="font-headline text-xl font-bold text-on-surface mb-3">Recursos Interativos</h3>
-                  <p className="font-body text-xs text-on-surface-variant leading-relaxed max-w-3xl">
+                  <p className="font-body text-sm text-on-surface-variant leading-relaxed max-w-3xl">
                     Transformamos cada tour em uma experiência rica e participativa. Imagine poder clicar em um objeto e assistir a um vídeo de demonstração, abrir uma galeria de fotos, baixar um catálogo em PDF ou ser direcionado para uma página de compra. Nossa tecnologia permite embutir esses e outros elementos.
                   </p>
                 </div>
@@ -319,7 +319,7 @@ export default function App() {
                   <span className="font-label text-primary font-bold tracking-widest uppercase text-[10px]">Contato</span>
                 </div>
                 <h2 className="font-headline text-3xl md:text-4xl font-light text-on-surface mb-6">Entre em contato</h2>
-                <p className="font-body text-on-surface-variant text-sm mb-12">
+                <p className="font-body text-on-surface-variant text-base mb-12">
                   Entre em contato conosco para saber mais sobre nossos serviços e como podemos transformar seu negócio.
                 </p>
                 
