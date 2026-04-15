@@ -31,7 +31,10 @@ export default function App() {
       {/* Navbar */}
       <nav className="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="text-2xl font-black tracking-[4px] text-primary uppercase font-headline">Urano</div>
+          <div className="flex items-center gap-3">
+            <img src="/favicon.svg" alt="Urano Logo" className="w-8 h-8" />
+            <div className="text-2xl font-black tracking-[4px] text-primary uppercase font-headline">Urano</div>
+          </div>
           
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
