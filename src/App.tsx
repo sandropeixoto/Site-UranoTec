@@ -90,15 +90,20 @@ export default function App() {
               </div>
             </FadeIn>
             <FadeIn delay={0.2} className="relative lg:h-[400px] flex items-center justify-center bg-white/5 rounded-[20px] border border-dashed border-outline-variant overflow-hidden group">
-              <div className="absolute z-20 w-20 h-20 rounded-full border-2 border-primary flex items-center justify-center shadow-[0_0_20px_rgba(38,166,136,0.3)] after:content-['PLAY'] after:text-[10px] after:tracking-[2px] after:text-primary after:font-bold cursor-pointer group-hover:scale-110 transition-transform"></div>
+              <a 
+                href="https://youtu.be/pT7bQAd4hD0?si=f_Ww3-hKp0yOzP5N" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="absolute z-20 w-20 h-20 rounded-full border-2 border-primary flex items-center justify-center shadow-[0_0_20px_rgba(38,166,136,0.3)] after:content-['PLAY'] after:text-[10px] after:tracking-[2px] after:text-primary after:font-bold cursor-pointer group-hover:scale-110 transition-transform"
+              ></a>
               <img 
-                src="https://images.unsplash.com/photo-1617791160505-6f00504e3519?q=80&w=2000&auto=format&fit=crop" 
-                alt="Digital Twin Virtual Tour" 
+                src="https://i.ytimg.com/vi/pT7bQAd4hD0/maxresdefault.jpg" 
+                alt="Urano Inteligência & Tecnologia - Tour Virtual 360" 
                 className="relative z-10 w-full h-full object-cover opacity-50"
               />
               <div className="absolute bottom-5 left-5 text-left z-20">
-                <div className="font-bold text-sm text-white">Showreel 2024</div>
-                <div className="text-[11px] text-on-surface-variant mt-1">Ambientes Industriais e Comerciais</div>
+                <div className="font-bold text-sm text-white">Urano Inteligência & Tecnologia</div>
+                <div className="text-[11px] text-on-surface-variant mt-1">Transformamos espaços físicos em experiências digitais imersivas.</div>
               </div>
             </FadeIn>
           </div>
