@@ -90,7 +90,7 @@ export default function App() {
               </div>
             </FadeIn>
             <FadeIn delay={0.2} className="relative lg:h-[400px] flex items-center justify-center bg-white/5 rounded-[20px] border border-dashed border-outline-variant overflow-hidden group">
-              <div className="absolute z-20 w-20 h-20 rounded-full border-2 border-primary flex items-center justify-center shadow-[0_0_20px_rgba(0,210,255,0.3)] after:content-['PLAY'] after:text-[10px] after:tracking-[2px] after:text-primary after:font-bold cursor-pointer group-hover:scale-110 transition-transform"></div>
+              <div className="absolute z-20 w-20 h-20 rounded-full border-2 border-primary flex items-center justify-center shadow-[0_0_20px_rgba(38,166,136,0.3)] after:content-['PLAY'] after:text-[10px] after:tracking-[2px] after:text-primary after:font-bold cursor-pointer group-hover:scale-110 transition-transform"></div>
               <img 
                 src="https://images.unsplash.com/photo-1617791160505-6f00504e3519?q=80&w=2000&auto=format&fit=crop" 
                 alt="Digital Twin Virtual Tour" 
@@ -109,7 +109,7 @@ export default function App() {
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <FadeIn>
               <div className="flex items-center gap-2 mb-6">
-                <div className="w-1 h-1 bg-primary rounded-full shadow-[0_0_8px_rgba(0,210,255,1)]"></div>
+                <div className="w-1 h-1 bg-primary rounded-full shadow-[0_0_8px_rgba(38,166,136,1)]"></div>
                 <span className="font-label text-primary font-bold tracking-widest uppercase text-[10px]">Sobre a Urano</span>
               </div>
               <h2 className="font-headline text-3xl md:text-4xl font-light text-on-surface mb-6">Inovação em cada detalhe.</h2>
@@ -123,7 +123,7 @@ export default function App() {
             <FadeIn delay={0.2} className="relative rounded-3xl overflow-hidden aspect-video border border-outline-variant/20 group">
               <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2000&auto=format&fit=crop" alt="Video Thumbnail" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-surface/40 flex items-center justify-center">
-                <a href="https://youtu.be/pT7bQAd4hD0?si=f_Ww3-hKp0yOzP5N" target="_blank" rel="noopener noreferrer" className="w-20 h-20 bg-primary rounded-full flex items-center justify-center text-surface hover:scale-110 transition-transform shadow-[0_0_30px_rgba(102,218,186,0.5)]">
+                <a href="https://youtu.be/pT7bQAd4hD0?si=f_Ww3-hKp0yOzP5N" target="_blank" rel="noopener noreferrer" className="w-20 h-20 bg-primary rounded-full flex items-center justify-center text-surface hover:scale-110 transition-transform shadow-[0_0_30px_rgba(38,166,136,0.5)]">
                   <Play className="w-8 h-8 ml-1" fill="currentColor" />
                 </a>
               </div>
@@ -135,7 +135,7 @@ export default function App() {
         <section id="servicos" className="py-24 px-6">
           <FadeIn className="max-w-7xl mx-auto text-center mb-20 flex flex-col items-center">
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-1 h-1 bg-primary rounded-full shadow-[0_0_8px_rgba(0,210,255,1)]"></div>
+              <div className="w-1 h-1 bg-primary rounded-full shadow-[0_0_8px_rgba(38,166,136,1)]"></div>
               <span className="font-label text-primary font-bold tracking-widest uppercase text-[10px]">Nossos Serviços</span>
             </div>
             <h2 className="font-headline text-3xl md:text-4xl font-light text-on-surface max-w-3xl mx-auto leading-tight">
@@ -147,7 +147,7 @@ export default function App() {
             <FadeIn className="relative rounded-3xl overflow-hidden aspect-video border border-outline-variant/20 group">
               <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000&auto=format&fit=crop" alt="Video Thumbnail" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-surface/40 flex items-center justify-center">
-                <a href="https://youtu.be/XNsdZ6B76Zw?si=-6fghYZvZninBbZ5" target="_blank" rel="noopener noreferrer" className="w-20 h-20 bg-primary rounded-full flex items-center justify-center text-surface hover:scale-110 transition-transform shadow-[0_0_30px_rgba(102,218,186,0.5)]">
+                <a href="https://youtu.be/XNsdZ6B76Zw?si=-6fghYZvZninBbZ5" target="_blank" rel="noopener noreferrer" className="w-20 h-20 bg-primary rounded-full flex items-center justify-center text-surface hover:scale-110 transition-transform shadow-[0_0_30px_rgba(38,166,136,0.5)]">
                   <Play className="w-8 h-8 ml-1" fill="currentColor" />
                 </a>
               </div>
@@ -188,7 +188,7 @@ export default function App() {
           <div className="max-w-7xl mx-auto">
             <FadeIn className="text-center mb-20 flex flex-col items-center">
               <div className="flex items-center gap-2 mb-6">
-                <div className="w-1 h-1 bg-primary rounded-full shadow-[0_0_8px_rgba(0,210,255,1)]"></div>
+                <div className="w-1 h-1 bg-primary rounded-full shadow-[0_0_8px_rgba(38,166,136,1)]"></div>
                 <span className="font-label text-primary font-bold tracking-widest uppercase text-[10px]">Vantagens</span>
               </div>
               <h2 className="font-headline text-3xl md:text-4xl font-light text-on-surface">Benefícios Exclusivos</h2>
@@ -221,7 +221,7 @@ export default function App() {
         <section id="portfolio" className="py-24 px-6">
           <FadeIn className="max-w-7xl mx-auto mb-16 flex flex-col items-start">
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-1 h-1 bg-primary rounded-full shadow-[0_0_8px_rgba(0,210,255,1)]"></div>
+              <div className="w-1 h-1 bg-primary rounded-full shadow-[0_0_8px_rgba(38,166,136,1)]"></div>
               <span className="font-label text-primary font-bold tracking-widest uppercase text-[10px]">Showcase</span>
             </div>
             <h2 className="font-headline text-3xl md:text-4xl font-light text-on-surface">Alguns de Nossos Trabalhos</h2>
@@ -262,7 +262,7 @@ export default function App() {
             <FadeIn className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
               <div>
                 <div className="flex items-center gap-2 mb-6">
-                  <div className="w-1 h-1 bg-primary rounded-full shadow-[0_0_8px_rgba(0,210,255,1)]"></div>
+                  <div className="w-1 h-1 bg-primary rounded-full shadow-[0_0_8px_rgba(38,166,136,1)]"></div>
                   <span className="font-label text-primary font-bold tracking-widest uppercase text-[10px]">Tecnologia</span>
                 </div>
                 <h2 className="font-headline text-3xl md:text-4xl font-light text-on-surface">Sobre nossa Plataforma</h2>
@@ -306,7 +306,7 @@ export default function App() {
             <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-16">
               <div>
                 <div className="flex items-center gap-2 mb-6">
-                  <div className="w-1 h-1 bg-primary rounded-full shadow-[0_0_8px_rgba(0,210,255,1)]"></div>
+                  <div className="w-1 h-1 bg-primary rounded-full shadow-[0_0_8px_rgba(38,166,136,1)]"></div>
                   <span className="font-label text-primary font-bold tracking-widest uppercase text-[10px]">Contato</span>
                 </div>
                 <h2 className="font-headline text-3xl md:text-4xl font-light text-on-surface mb-6">Entre em contato</h2>
