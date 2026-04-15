@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 import { 
   Menu, X, ChevronRight, Play, 
   MonitorSmartphone, Eye, Lightbulb, 
@@ -8,6 +8,44 @@ import {
   MousePointerClick, Mail, Calendar, 
   Wrench
 } from 'lucide-react';
+
+function VideoModal({ isOpen, onClose, videoId }: { isOpen: boolean, onClose: () => void, videoId: string }) {
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm"
+          onClick={onClose}
+        >
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.9, opacity: 0 }}
+            className="relative w-full max-w-5xl aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button 
+              onClick={onClose}
+              className="absolute top-4 right-4 z-10 p-2 bg-black/50 hover:bg-black/80 text-white rounded-full transition-colors"
+            >
+              <X className="w-6 h-6" />
+            </button>
+            <iframe
+              src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&rel=0`}
+              title="YouTube video player"
+              className="w-full h-full border-0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+}
 
 function FadeIn({ children, delay = 0, className = "" }: { children: React.ReactNode, delay?: number, className?: string, key?: React.Key }) {
   return (
@@ -25,9 +63,15 @@ function FadeIn({ children, delay = 0, className = "" }: { children: React.React
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeVideo, setActiveVideo] = useState<string | null>(null);
 
   return (
     <div className="min-h-screen bg-surface text-on-surface font-body selection:bg-primary selection:text-surface">
+      <VideoModal 
+        isOpen={!!activeVideo} 
+        onClose={() => setActiveVideo(null)} 
+        videoId={activeVideo || ''} 
+      />
       {/* Navbar */}
       <nav className="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -93,12 +137,10 @@ export default function App() {
               </div>
             </FadeIn>
             <FadeIn delay={0.2} className="relative lg:h-[400px] flex items-center justify-center bg-white/5 rounded-[20px] border border-dashed border-outline-variant overflow-hidden group">
-              <a 
-                href="https://youtu.be/pT7bQAd4hD0?si=f_Ww3-hKp0yOzP5N" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <button 
+                onClick={() => setActiveVideo('pT7bQAd4hD0')}
                 className="absolute z-20 w-20 h-20 rounded-full border-2 border-primary flex items-center justify-center shadow-[0_0_20px_rgba(38,166,136,0.3)] after:content-['PLAY'] after:text-[10px] after:tracking-[2px] after:text-primary after:font-bold cursor-pointer group-hover:scale-110 transition-transform"
-              ></a>
+              ></button>
               <img 
                 src="https://i.ytimg.com/vi/pT7bQAd4hD0/maxresdefault.jpg" 
                 alt="Urano Inteligência & Tecnologia - Tour Virtual 360" 
@@ -131,9 +173,12 @@ export default function App() {
             <FadeIn delay={0.2} className="relative rounded-3xl overflow-hidden aspect-video border border-outline-variant/20 group">
               <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2000&auto=format&fit=crop" alt="Video Thumbnail" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-surface/40 flex items-center justify-center">
-                <a href="https://youtu.be/pT7bQAd4hD0?si=f_Ww3-hKp0yOzP5N" target="_blank" rel="noopener noreferrer" className="w-20 h-20 bg-primary rounded-full flex items-center justify-center text-surface hover:scale-110 transition-transform shadow-[0_0_30px_rgba(38,166,136,0.5)]">
+                <button 
+                  onClick={() => setActiveVideo('pT7bQAd4hD0')}
+                  className="w-20 h-20 bg-primary rounded-full flex items-center justify-center text-surface hover:scale-110 transition-transform shadow-[0_0_30px_rgba(38,166,136,0.5)]"
+                >
                   <Play className="w-8 h-8 ml-1" fill="currentColor" />
-                </a>
+                </button>
               </div>
             </FadeIn>
           </div>
@@ -155,9 +200,12 @@ export default function App() {
             <FadeIn className="relative rounded-3xl overflow-hidden aspect-video border border-outline-variant/20 group">
               <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000&auto=format&fit=crop" alt="Video Thumbnail" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-surface/40 flex items-center justify-center">
-                <a href="https://youtu.be/XNsdZ6B76Zw?si=-6fghYZvZninBbZ5" target="_blank" rel="noopener noreferrer" className="w-20 h-20 bg-primary rounded-full flex items-center justify-center text-surface hover:scale-110 transition-transform shadow-[0_0_30px_rgba(38,166,136,0.5)]">
+                <button 
+                  onClick={() => setActiveVideo('XNsdZ6B76Zw')}
+                  className="w-20 h-20 bg-primary rounded-full flex items-center justify-center text-surface hover:scale-110 transition-transform shadow-[0_0_30px_rgba(38,166,136,0.5)]"
+                >
                   <Play className="w-8 h-8 ml-1" fill="currentColor" />
-                </a>
+                </button>
               </div>
             </FadeIn>
             <FadeIn delay={0.2} className="flex flex-col justify-center">
