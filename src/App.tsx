@@ -432,6 +432,7 @@ export default function App() {
       <footer className="border-t border-outline-variant py-8 px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] text-on-surface-variant uppercase tracking-widest">
           <div className="flex flex-col items-center md:items-start gap-2">
+            <img src="./favicon.svg" alt="Urano Logo" className="w-8 h-8" />
             <div className="text-lg font-black text-primary tracking-[4px]">URANO</div>
             <p className="text-center md:text-left">
               Urano Inteligência & Tecnologia LTDA - 47.062.979/0001-96<br/>
