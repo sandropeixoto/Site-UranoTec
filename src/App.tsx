@@ -449,7 +449,7 @@ export default function App() {
 
       {/* Footer */}
       <footer className="border-t border-outline-variant py-8 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] text-on-surface-variant uppercase tracking-widest">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] text-on-surface-variant uppercase tracking-widest pb-8">
           <div className="flex flex-col items-center md:items-start gap-2">
             <div className="flex items-center gap-3">
               <img src="./favicon.svg" alt="Urano Logo" className="w-8 h-8" />
@@ -467,6 +467,17 @@ export default function App() {
               IG: @URANOTECBR
             </a>
           </div>
+        </div>
+
+        <div className="flex justify-center pt-8 border-t border-outline-variant/30 text-[11px] uppercase">
+          <a 
+            href="https://nano.net.br" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-primary font-bold tracking-wider inline-block transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_0_8px_rgba(38,166,136,0.5)]"
+          >
+            Desenvolvido por NANO
+          </a>
         </div>
       </footer>
     </div>
