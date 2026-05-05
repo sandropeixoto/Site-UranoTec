@@ -28,6 +28,15 @@ A **Urano Inteligência & Tecnologia** atua na vanguarda da inovação digital, 
 > **Pacotes e Mapeamento de Serviços**  
 > Listagem interativa de propostas de valor focadas na redução de custos de deslocamento, marketing contínuo 24/7 e detalhamento tecnológico (Puck, Oberon e Titânia).
 
+> **[SEO] Dynamic JSON-LD Schema Markup**  
+> Implementação de scripts de dados estruturados (Schema.org) gerados dinamicamente para cada página, facilitando a exibição de *rich snippets* (estrelas, preços e disponibilidade) nos resultados de busca.
+
+> **[SEO] Canonical Tag Management**  
+> Gestão automatizada de `rel="canonical"` para evitar problemas de conteúdo duplicado, especialmente em sistemas com múltiplos filtros ou parâmetros de busca.
+
+> **[SEO] Meta Tag Hydration**  
+> Sistema de atualização dinâmica de Meta Titles e Descriptions baseado no contexto da rota, otimizando o CTR (Click-Through Rate) para termos de busca específicos.
+
 ## Stack Técnica
 
 | Tecnologia | Descrição / Implementação |

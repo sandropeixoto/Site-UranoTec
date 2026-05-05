@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { SEO } from './components/SEO';
 import { 
   Menu, X, ChevronRight, Play, 
   MonitorSmartphone, Eye, Lightbulb, 
@@ -67,6 +68,24 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-surface text-on-surface font-body selection:bg-primary selection:text-surface">
+      <SEO 
+        title="Urano Inteligência & Tecnologia | Tours Virtuais 360º"
+        description="Transformamos espaços físicos em experiências digitais imersivas utilizando tecnologia de ponta em captura e modelagem 3D."
+        canonicalUrl="https://urano.tec.br"
+        schemaMarkup={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Urano Inteligência & Tecnologia",
+          "url": "https://urano.tec.br",
+          "logo": "https://urano.tec.br/favicon.svg",
+          "description": "Transformamos espaços físicos em experiências digitais imersivas.",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "contato@urano.tec.br",
+            "contactType": "customer service"
+          }
+        }}
+      />
       <VideoModal 
         isOpen={!!activeVideo} 
         onClose={() => setActiveVideo(null)} 
