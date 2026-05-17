@@ -59,7 +59,7 @@ export function SEO({ title, description, canonicalUrl, schemaMarkup }: SEOProps
         script.setAttribute('type', 'application/ld+json');
         document.head.appendChild(script);
       }
-      script.text = JSON.stringify(schemaMarkup);
+      script.text = JSON.stringify(schemaMarkup).replace(/</g, '\\u003c');
     }
   }, [title, description, canonicalUrl, schemaMarkup]);
 

@@ -35,7 +35,7 @@ function VideoModal({ isOpen, onClose, videoId }: { isOpen: boolean, onClose: ()
               <X className="w-6 h-6" />
             </button>
             <iframe
-              src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&rel=0`}
+              src={`https://www.youtube.com/embed/${encodeURIComponent(videoId)}?autoplay=1&mute=1&rel=0`}
               title="YouTube video player"
               className="w-full h-full border-0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
