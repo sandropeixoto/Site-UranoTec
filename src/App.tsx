@@ -7,7 +7,7 @@ import {
   TrendingUp, Users, DollarSign, 
   Award, Settings, Image as ImageIcon, 
   MousePointerClick, Mail, Calendar, 
-  Wrench
+  Wrench, MessageCircle, Phone
 } from 'lucide-react';
 
 function VideoModal({ isOpen, onClose, videoId }: { isOpen: boolean, onClose: () => void, videoId: string }) {
@@ -147,7 +147,12 @@ export default function App() {
                 Tours virtuais 360º de alto impacto para marketing, vendas e integração de equipes.
               </p>
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-                <a href="#contato" className="bg-primary text-surface px-6 py-3 rounded-md font-bold font-headline text-xs uppercase tracking-widest hover:opacity-90 transition-all">
+                <a 
+                  href="https://wa.me/5591993565074?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20demonstra%C3%A7%C3%A3o%20dos%20tours%20virtuais%20da%20Urano." 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="bg-primary text-surface px-6 py-3 rounded-md font-bold font-headline text-xs uppercase tracking-widest hover:opacity-90 transition-all inline-flex items-center justify-center"
+                >
                   AGENDAR DEMONSTRAÇÃO
                 </a>
                 <a href="#portfolio" className="bg-transparent text-on-surface px-6 py-3 rounded-md font-bold font-headline text-xs uppercase tracking-widest border border-outline-variant hover:bg-surface-container-high transition-all">
@@ -302,14 +307,12 @@ export default function App() {
             <h2 className="font-headline text-3xl md:text-4xl font-light text-on-surface">Alguns de Nossos Trabalhos</h2>
           </FadeIn>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {[
-              { title: "CABOCA", desc: "Matterport 3D Showcase", url: "https://my.matterport.com/show/?m=gAyKQv25SbW", img: "https://my.matterport.com/api/v2/player/models/gAyKQv25SbW/thumb/" },
-              { title: "Condomínio Jardins do Lago", desc: "Matterport 3D Showcase", url: "https://my.matterport.com/show/?m=rJmuyLNPLyy", img: "https://my.matterport.com/api/v2/player/models/rJmuyLNPLyy/thumb/" },
-              { title: "Associação Comercial do Pará - ACP", desc: "Matterport 3D Showcase", url: "https://my.matterport.com/show/?m=5fcFQbQQ6kV", img: "https://my.matterport.com/api/v2/player/models/5fcFQbQQ6kV/thumb/" },
-              { title: "Centro de Cirurgia Instituto Face", desc: "Matterport 3D Showcase", url: "https://my.matterport.com/show/?m=vcQycyqev4K", img: "https://my.matterport.com/api/v2/player/models/vcQycyqev4K/thumb/" },
-              { title: "AGJ HOSPITAL SAÚDE CENTER", desc: "Hospital de Alta Complexidade 24h em Capanema", url: "https://my.matterport.com/show/?m=xFJ43zUYq6U", img: "https://my.matterport.com/api/v2/player/models/xFJ43zUYq6U/thumb/" },
-              { title: "Tour virtual Caixa Pará", desc: "Virtual Tour", url: "https://urano360.com.br/caixa-para/", img: "https://images.unsplash.com/photo-1554469384-e58fac16e23a?q=80&w=800&auto=format&fit=crop" }
+              { title: "Condomínio Jardins do Lago", desc: "Matterport 3D Showcase - Empreendimento residencial completo", url: "https://my.matterport.com/show/?m=rJmuyLNPLyy", img: "https://my.matterport.com/api/v2/player/models/rJmuyLNPLyy/thumb/" },
+              { title: "Associação Comercial do Pará - ACP", desc: "Matterport 3D Showcase - Patrimônio histórico e corporativo", url: "https://my.matterport.com/show/?m=5fcFQbQQ6kV", img: "https://my.matterport.com/api/v2/player/models/5fcFQbQQ6kV/thumb/" },
+              { title: "Centro de Cirurgia Instituto Face", desc: "Matterport 3D Showcase - Infraestrutura médica e clínica especializada", url: "https://my.matterport.com/show/?m=vcQycyqev4K", img: "https://my.matterport.com/api/v2/player/models/vcQycyqev4K/thumb/" },
+              { title: "Tour virtual Caixa Pará", desc: "Virtual Tour Imersivo - Experiência 360º de agência bancária", url: "https://urano360.com.br/caixa-para/", img: "https://images.unsplash.com/photo-1554469384-e58fac16e23a?q=80&w=800&auto=format&fit=crop" }
             ].map((work, idx) => (
               <FadeIn key={idx} delay={idx * 0.1} className="group block">
                 <a href={work.url} target="_blank" rel="noopener noreferrer" className="block h-full">
@@ -391,35 +394,74 @@ export default function App() {
                 </p>
                 
                 <div className="space-y-8">
-                  <div className="flex gap-4 items-start">
-                    <div className="w-10 h-10 rounded bg-white/5 flex items-center justify-center text-primary shrink-0">
+                  <a 
+                    href="https://wa.me/5591993565074?text=Ol%C3%A1%2C%20atrav%C3%A9s%20do%20site%20me%20interessei%20pela%20tecnologia%20e%20gostaria%20de%20mais%20detalhes."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex gap-4 items-start group hover:opacity-95 transition-all p-3 -mx-3 rounded-lg hover:bg-white/5 border border-transparent hover:border-primary/30"
+                  >
+                    <div className="w-10 h-10 rounded bg-primary/10 border border-primary/30 flex items-center justify-center text-primary shrink-0 group-hover:bg-primary group-hover:text-surface transition-all">
+                      <MessageCircle className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-2">
+                        <h4 className="font-headline font-bold text-on-surface text-sm group-hover:text-primary transition-colors">WhatsApp</h4>
+                        <span className="text-[10px] bg-primary/20 text-primary px-2 py-0.5 rounded-full font-semibold uppercase tracking-wider">Atendimento Rápido</span>
+                      </div>
+                      <p className="text-sm font-semibold text-primary mt-0.5 tracking-wide">+55 91 99356-5074</p>
+                      <p className="text-xs text-on-surface-variant mt-1">Converse conosco agora mesmo para tirar dúvidas e solicitar orçamentos.</p>
+                    </div>
+                  </a>
+
+                  <a 
+                    href="mailto:contato@urano.tec.br"
+                    className="flex gap-4 items-start group hover:opacity-95 transition-all p-3 -mx-3 rounded-lg hover:bg-white/5 border border-transparent hover:border-primary/30"
+                  >
+                    <div className="w-10 h-10 rounded bg-white/5 border border-outline-variant/40 flex items-center justify-center text-primary shrink-0 group-hover:bg-primary group-hover:text-surface group-hover:border-primary transition-all">
                       <Mail className="w-4 h-4" />
                     </div>
                     <div>
-                      <h4 className="font-headline font-bold text-on-surface text-sm">Email</h4>
-                      <a href="mailto:contato@urano.tec.br" className="text-xs text-on-surface-variant hover:text-primary transition-colors">contato@urano.tec.br</a>
+                      <h4 className="font-headline font-bold text-on-surface text-sm group-hover:text-primary transition-colors">Email</h4>
+                      <p className="text-xs text-on-surface-variant group-hover:text-primary/90 transition-colors mt-0.5">contato@urano.tec.br</p>
+                      <p className="text-xs text-on-surface-variant/80 mt-1">Envie sua mensagem ou solicitação de proposta por e-mail.</p>
                     </div>
-                  </div>
+                  </a>
                   
-                  <div className="flex gap-4 items-start">
-                    <div className="w-10 h-10 rounded bg-white/5 flex items-center justify-center text-primary shrink-0">
+                  <a 
+                    href="https://wa.me/5591993565074?text=Ol%C3%A1%2C%20atrav%C3%A9s%20do%20site%20me%20interessei%20pela%20tecnologia%20e%20gostaria%20de%20mais%20detalhes%20para%20agendar%20uma%20demonstra%C3%A7%C3%A3o."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex gap-4 items-start group hover:opacity-95 transition-all p-3 -mx-3 rounded-lg hover:bg-white/5 border border-transparent hover:border-primary/30"
+                  >
+                    <div className="w-10 h-10 rounded bg-white/5 border border-outline-variant/40 flex items-center justify-center text-primary shrink-0 group-hover:bg-primary group-hover:text-surface group-hover:border-primary transition-all">
                       <Calendar className="w-4 h-4" />
                     </div>
                     <div>
-                      <h4 className="font-headline font-bold text-on-surface text-sm">Agende uma demonstração</h4>
-                      <p className="text-xs text-on-surface-variant">Veja na prática como nossos tours virtuais podem transformar seu negócio.</p>
+                      <h4 className="font-headline font-bold text-on-surface text-sm group-hover:text-primary transition-colors flex items-center gap-1.5">
+                        Agende uma demonstração
+                        <span className="text-[10px] text-primary font-normal">→ WhatsApp</span>
+                      </h4>
+                      <p className="text-xs text-on-surface-variant mt-1">Veja na prática como nossos tours virtuais podem transformar seu negócio.</p>
                     </div>
-                  </div>
+                  </a>
                   
-                  <div className="flex gap-4 items-start">
-                    <div className="w-10 h-10 rounded bg-white/5 flex items-center justify-center text-primary shrink-0">
+                  <a
+                    href="https://wa.me/5591993565074?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20solu%C3%A7%C3%A3o%20personalizada%20para%20minha%20empresa."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex gap-4 items-start group hover:opacity-95 transition-all p-3 -mx-3 rounded-lg hover:bg-white/5 border border-transparent hover:border-primary/30"
+                  >
+                    <div className="w-10 h-10 rounded bg-white/5 border border-outline-variant/40 flex items-center justify-center text-primary shrink-0 group-hover:bg-primary group-hover:text-surface group-hover:border-primary transition-all">
                       <Wrench className="w-4 h-4" />
                     </div>
                     <div>
-                      <h4 className="font-headline font-bold text-on-surface text-sm">Personalize sua solução</h4>
-                      <p className="text-xs text-on-surface-variant">Desenvolvemos um projeto específico para atender às necessidades da sua empresa.</p>
+                      <h4 className="font-headline font-bold text-on-surface text-sm group-hover:text-primary transition-colors flex items-center gap-1.5">
+                        Personalize sua solução
+                        <span className="text-[10px] text-primary font-normal">→ WhatsApp</span>
+                      </h4>
+                      <p className="text-xs text-on-surface-variant mt-1">Desenvolvemos um projeto específico para atender às necessidades da sua empresa.</p>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
               
@@ -462,9 +504,18 @@ export default function App() {
           </div>
           
           <div className="flex flex-col items-center md:items-end gap-2">
+            <a 
+              href="https://wa.me/5591993565074?text=Ol%C3%A1%2C%20atrav%C3%A9s%20do%20site%20me%20interessei%20pela%20tecnologia%20e%20gostaria%20de%20mais%20detalhes." 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-primary transition-colors flex items-center gap-1.5"
+            >
+              <MessageCircle className="w-3.5 h-3.5 text-primary" />
+              WhatsApp: +55 91 99356-5074
+            </a>
             <a href="mailto:contato@urano.tec.br" className="hover:text-primary transition-colors">contato@urano.tec.br</a>
-            <a href="https://instagram.com/URANOTECBR" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-              IG: @URANOTECBR
+            <a href="https://instagram.com/urano_360" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              IG: @urano_360
             </a>
           </div>
         </div>
